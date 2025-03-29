@@ -2,7 +2,7 @@ baseURL = 'https://tsubaki.dev/'
 languageCode = 'en-us'
 title = 'tsubaki.dev'
 theme = "hugo-bearcub"
-copyright = "TsubakiDev (CC BY NA SA 4.0)"
+copyright = "Copyright TsubakiDev 2025-now"
 enableRobotsTXT = true
 
 [markup]

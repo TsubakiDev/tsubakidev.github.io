@@ -6,7 +6,8 @@ weight: 3
 
 # Friends
 
-They are all my friends. Possessing special skills!
-
-* beef's Blog
+* beef
  > Link: https://dbeef.dev/
+
+* makai410
+ > Link: https://makai410.dev/
