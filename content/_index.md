@@ -18,5 +18,4 @@ You can get in touch with me through the following contact details:
 
 - GitHub: [TsubakiDev](https://github.com/TsubakiDev)
 - Matrix: `@tsubakidev:matrix.org`
-- Discord: `TsubakiDev`
-- E-Mail: `[Redacted for now]`
+- Mastodon: [TsubakiDev](https://hachyderm.io/@tsubakidev)
