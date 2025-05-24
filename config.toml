@@ -11,7 +11,6 @@ build_search_index = true
 minify_html = true
 
 generate_feeds = true
-feed_filenames = ["index.xml"]
 
 author = "TsubakiDev"
 
@@ -23,7 +22,6 @@ taxonomies = [
 highlight_code = true
 
 [extra]
-
 list_pages = true
 
 display_author = true
