@@ -1,0 +1,36 @@
+base_url = "https://tsubaki.dev"
+title = "Tsubaki's Blog"
+description = "Here is tsubaki's personal blog."
+
+default_language = "en"
+
+theme = "anemone"
+
+build_search_index = true
+
+minify_html = true
+
+generate_feeds = true
+feed_filenames = ["index.xml"]
+
+author = "TsubakiDev"
+
+taxonomies = [
+    {name = "tags", feed = true, paginate_by = 10},
+]
+
+[markdown]
+highlight_code = true
+
+[extra]
+
+list_pages = true
+
+display_author = true
+
+toc = true
+
+header_nav = [
+  { url = "/", name_en = "/home/" },
+  { url = "/blog", name_en = "/blog/" },
+]

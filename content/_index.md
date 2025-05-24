@@ -1,21 +1,13 @@
----
-title: "Home"
-menu: "main"
-weight: 1
----
++++
++++
 
-Welcome! As you can see, this is my personal home page. I will be writing my blog and recommending my friends to you. It would be great if an article helped you.
+## About Me
+Hi, there is Tsubaki (aka TsubakiDev), Currently attending university in Shanghai.
 
-# Introduce
+I've been writing some software in `Rust`, and I'm also maintainer of `nixpkgs`.
 
-This is Tsubaki (he/him), Currently contributing to `nixpkgs` and will be working on `rustc` and `rust-analyzer` after June this year.
+My PGP public key: `C50CA983F44B4FA3`
 
-I am also currently a high school student preparing for college.
-
-# Social
-
-You can get in touch with me through the following contact details:
-
+## Contact
 - GitHub: [TsubakiDev](https://github.com/TsubakiDev)
-- Matrix: `@tsubakidev:matrix.org`
-- Mastodon: [TsubakiDev](https://hachyderm.io/@tsubakidev)
+- Email (For public): [i@tsubaki.dev](mailto:i@tsubaki.dev)
