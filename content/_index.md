@@ -2,12 +2,13 @@
 +++
 
 ## About Me
-Hi, there is Tsubaki (aka TsubakiDev), Currently attending university in Shanghai.
 
-I've been writing some software in `Rust`, and I'm also maintainer of `nixpkgs`.
+Hi, I'm Tsubaki (aka Tsubaki{Dev,OvO}).
 
-My PGP public key: `C50CA983F44B4FA3`
+I'm currently conducting research on neuromorphic computing, with a strong interest in next-generation AI architectures and biologically inspired systems.
+
+GPG Fingerprint: `33D3 ECCF B9D8 0D00 0721`
 
 ## Contact
 - GitHub: [TsubakiDev](https://github.com/TsubakiDev)
-- Email (For public): [i@tsubaki.dev](mailto:i@tsubaki.dev)
+- Email (For public): [i at tsubaki dot dev](mailto:i@tsubaki.dev)
