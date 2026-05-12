@@ -1,14 +1,27 @@
 +++
 +++
 
+# Tsubaki
+
+> Researching neuromorphic computing and biologically inspired AI systems.
+
 ## About Me
 
-Hi, I'm Tsubaki (aka Tsubaki{Dev,OvO}).
+I'm currently working on neuromorphic computing, with a focus on next-generation AI architectures, efficient inference systems, and brain-inspired computation.
 
-I'm currently conducting research on neuromorphic computing, with a strong interest in next-generation AI architectures and biologically inspired systems.
+I primarily develop software in `Rust` and contribute to the open-source ecosystem.
 
-GPG Fingerprint: `33D3 ECCF B9D8 0D00 0721`
+GPG Fingerprint:
+
+```text
+33D3 ECCF B9D8 0D00 0721
+```
+
+## Projects
+
+- [IrohaLLM](https://irohallm.com) — Integration of memory-based models and the initial use of LLMs in SNNs
 
 ## Contact
-- GitHub: [TsubakiDev](https://github.com/TsubakiDev)
-- Email (For public): [i at tsubaki dot dev](mailto:i@tsubaki.dev)
+
+- GitHub: [@TsubakiDev](https://github.com/TsubakiDev)
+- Email: [i@tsubaki.dev](mailto:i@tsubaki.dev)
