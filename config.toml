@@ -17,13 +17,12 @@ minify_html = true
 
 generate_feeds = true
 
-author = "TsubakiDev"
-
 taxonomies = [
     {name = "tags", feed = true, paginate_by = 10},
 ]
 
 [extra]
+author = "TsubakiDev"
 list_pages = true
 
 display_author = true
