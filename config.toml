@@ -4,29 +4,20 @@ description = "Here is tsubaki's personal blog."
 
 default_language = "en"
 
-[languages.zh-cn]
-language_code = "zh-cn"
-title = "Tsubaki 的博客"
-description = "Tsubaki 的个人博客。"
-
-theme = "anemone"
-
 build_search_index = true
-
-minify_html = true
-
 generate_feeds = true
 
 taxonomies = [
     {name = "tags", feed = true, paginate_by = 10},
 ]
 
+minify_html = true
+theme = "anemone"
+
 [extra]
 author = "TsubakiDev"
 list_pages = true
-
 display_author = true
-
 toc = true
 
 header_nav = [
