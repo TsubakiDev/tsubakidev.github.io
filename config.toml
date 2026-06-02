@@ -4,6 +4,11 @@ description = "Here is tsubaki's personal blog."
 
 default_language = "en"
 
+[languages.zh-cn]
+language_code = "zh-cn"
+title = "Tsubaki 的博客"
+description = "Tsubaki 的个人博客。"
+
 theme = "anemone"
 
 build_search_index = true
