@@ -8,8 +8,6 @@ draft = false
 tags = ["networking", "game-development", "udp", "systems-architecture", "pseudocode"]
 +++
 
-# Designing a Bounded UDP Transport Architecture for Real-Time Games
-
 Real-time games do not have one network requirement. They have several traffic classes that must coexist on the same path:
 
 - input must arrive quickly and remain fresh;
