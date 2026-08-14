@@ -35,6 +35,7 @@ author = "TsubakiDev"
 list_pages = true
 display_author = true
 toc = true
+mermaid = true
 
 header_nav = [
   { url = "/", name_en = "/home/" },

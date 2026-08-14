@@ -170,6 +170,16 @@ The response wraps the actual session data in a nested struct (field ID 1 of the
 
 ## Seven-Stage QR Login Handshake
 
+~~~mermaid
+flowchart LR
+    Session["1. createSession"] --> QR["2. createQrCodeForSecure"]
+    QR --> Scan["3. checkQrCodeVerified"]
+    Scan --> Certificate["4. verifyCertificate"]
+    Certificate --> Pin["5. createPinCode"]
+    Pin --> PinCheck["6. checkPinCodeVerified"]
+    PinCheck --> Login["7. qrCodeLoginV2ForSecure"]
+~~~
+
 ### Stage 1: createSession
 
 **Thrift type**: `ek1/k` (empty request) → wrapped in `ek1/m0` (field 1 = STRUCT)

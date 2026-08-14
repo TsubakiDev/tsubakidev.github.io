@@ -2,8 +2,6 @@
 title = "Friends"
 +++
 
-# Friends
-
 A small collection of people, projects, and corners of the internet I enjoy visiting.
 
 ## Exchange a link

@@ -26,32 +26,19 @@ This article develops that architecture from first principles and includes porta
 
 The transport should sit between the game simulation and the operating-system socket layer:
 
-~~~text
-+----------------------------+
-| Game simulation             |
-| prediction, snapshots, RPCs |
-+----------------------------+
-              |
-              | typed messages and channel policy
-              v
-+----------------------------+
-| Connection state machine    |
-| queues, ACKs, timers, loss  |
-| fragmentation, reassembly   |
-+----------------------------+
-       |                  |
-       v                  v
-+--------------+  +---------------------+
-| Packet codec |  | RTT / loss / CC     |
-| wire format  |  | pacing, cwnd, PTO   |
-+--------------+  +---------------------+
-              |
-              | complete UDP datagrams
-              v
-+----------------------------+
-| Socket adapter              |
-| non-blocking I/O, addresses |
-+----------------------------+
+~~~mermaid
+flowchart TD
+    Game["Game simulation<br/>prediction, snapshots, RPCs"]
+    Connection["Connection state machine<br/>queues, ACKs, timers, loss<br/>fragmentation, reassembly"]
+    Codec["Packet codec<br/>wire format"]
+    Control["RTT / loss / CC<br/>pacing, cwnd, PTO"]
+    Socket["Socket adapter<br/>non-blocking I/O, addresses"]
+
+    Game -->|"typed messages and channel policy"| Connection
+    Connection --> Codec
+    Connection --> Control
+    Codec -->|"complete UDP datagrams"| Socket
+    Control -->|"complete UDP datagrams"| Socket
 ~~~
 
 The connection object should not own a socket. It exposes a transmit callback and accepts complete datagrams from the caller. The same state machine can then run with a normal UDP socket, an IO completion port, an engine network thread, a packet-batching API, or a deterministic simulator.
@@ -259,18 +246,14 @@ The record owns a copy only when the message must survive the caller's send call
 
 On receive, process the identities in this order:
 
-~~~text
-packet arrives
-    |
-    +--> packet ACK window: new / duplicate / too old
-    |
-    +--> fragment map: new fragment / duplicate fragment
-    |
-    +--> complete message?
-            |
-            +--> reliable ordered: wait for receive frontier
-            +--> reliable unordered: deliver once
-            +--> sequenced: deliver only if newer
+~~~mermaid
+flowchart TD
+    Packet["Packet arrives"] --> Ack["Packet ACK window<br/>new / duplicate / too old"]
+    Ack --> Fragments["Fragment map<br/>new / duplicate fragment"]
+    Fragments --> Complete{"Complete message?"}
+    Complete -->|"Reliable ordered"| Ordered["Wait for receive frontier"]
+    Complete -->|"Reliable unordered"| Unordered["Deliver once"]
+    Complete -->|"Sequenced"| Sequenced["Deliver only if newer"]
 ~~~
 
 Do not increment reassembly bytes for a duplicate fragment. Do not invoke the game callback until all fragments are present and the message passes size and integrity checks.
