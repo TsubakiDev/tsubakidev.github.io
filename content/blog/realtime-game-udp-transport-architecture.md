@@ -917,3 +917,9 @@ Before shipping:
 16. Establish hardware-specific thresholds instead of copying numbers from another machine.
 
 The central idea is to separate packet mechanics from message semantics, make every resource finite, and let the game choose what is worth preserving. Once those decisions are explicit, loss recovery, congestion control, weak-network testing, and production diagnostics become composable parts of one understandable state machine.
+
+## Acknowledgements
+
+This article builds on decades of work in computer networking, transport-protocol design, congestion-control research, and real-time game networking. The ideas around packet acknowledgement windows, RTT estimation, loss thresholds, probe backoff, pacing, stateless admission cookies, and deterministic network simulation are the result of many engineers and researchers sharing measurements, standards, and implementation lessons.
+
+Thanks to the open-source networking community and to the game engineers who have documented the practical consequences of packet loss, reordering, bufferbloat, mobile-network handovers, and overloaded queues. Their experience is what turns abstract transport mechanisms into useful design rules: preserve freshness where possible, guarantee delivery where necessary, and make every resource limit visible.
