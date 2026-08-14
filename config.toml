@@ -14,6 +14,11 @@ taxonomies = [
 minify_html = true
 theme = "anemone"
 
+[markdown]
+render_emoji = true
+external_links_target_blank = true
+smart_punctuation = true
+
 [extra]
 author = "TsubakiDev"
 list_pages = true
