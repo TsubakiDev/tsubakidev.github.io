@@ -1,15 +1,27 @@
-# Sample workflow for building and deploying a Hugo site to GitHub Pages
 name: Deploy Zola site to Pages
 
-on: push
+on:
+  push:
+    branches:
+      - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v4
-      - name: build_and_deploy
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Update Git submodules
+        run: |
+          git submodule sync --recursive
+          git submodule update --init --remote --recursive
+
+      - name: Build and deploy
         uses: shalzz/zola-deploy-action@master
         env:
           PAGES_BRANCH: gh-pages
