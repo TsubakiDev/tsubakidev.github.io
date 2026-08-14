@@ -18,6 +18,17 @@ theme = "anemone"
 render_emoji = true
 external_links_target_blank = true
 smart_punctuation = true
+definition_list = true
+bottom_footnotes = true
+github_alerts = true
+lazy_async_image = true
+insert_anchor_links = "right"
+
+[markdown.highlighting]
+error_on_missing_language = false
+style = "class"
+light_theme = "github-light"
+dark_theme = "gruvbox-dark-medium"
 
 [extra]
 author = "TsubakiDev"
@@ -28,4 +39,5 @@ toc = true
 header_nav = [
   { url = "/", name_en = "/home/" },
   { url = "/blog", name_en = "/blog/" },
+  { url = "/friends", name_en = "/friends/" },
 ]

@@ -16,8 +16,15 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
+      - name: Patch Anemone for Zola 0.23
+        run: |
+          sed -i 's/ | escape / | escape_xml /g' themes/anemone/templates/atom.xml
+          sed -i 's/{% block head %}/{% block extra_head %}/g' themes/anemone/templates/page.html themes/anemone/templates/blog/page.html
+          sed -i 's/{% if page.title %}/{% if page is defined and page.title %}/g' themes/anemone/templates/base.html
+          sed -i 's#            <span class="date">{{ page.date | date(format="%Y-%m-%d") }}</span>#            {% if page.date %}<span class="date">{{ page.date | date(format="%Y-%m-%d") }}</span>{% endif %}#' themes/anemone/templates/index.html
+
       - name: Build and deploy
-        uses: shalzz/zola-deploy-action@v0.19.2
+        uses: shalzz/zola-deploy-action@v0.23.3
         env:
           PAGES_BRANCH: gh-pages
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
