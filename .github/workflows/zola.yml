@@ -16,13 +16,8 @@ jobs:
           submodules: recursive
           fetch-depth: 0
 
-      - name: Update Git submodules
-        run: |
-          git submodule sync --recursive
-          git submodule update --init --remote --recursive
-
       - name: Build and deploy
-        uses: shalzz/zola-deploy-action@master
+        uses: shalzz/zola-deploy-action@v0.19.2
         env:
           PAGES_BRANCH: gh-pages
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
